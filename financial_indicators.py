@@ -1,11 +1,12 @@
-Create financial_indicators.py
 import numpy as np
+import numpy_financial as npf 
 
 cash_flows = [-10000, 25000, 15000, 30000]
 discount_rate = 0.10 
 
-van_result = np.npv(discount_rate, cash_flows) 
-irr_result = np.irr(cash_flows) 
+
+van_result = npf.npv(discount_rate, cash_flows) 
+irr_result = npf.irr(cash_flows) 
 
 print("--- Résultats de l'Analyse Financière ---")
 print(f"1. VAN (Valeur Actuelle Nette): {van_result:,.2f} €")
